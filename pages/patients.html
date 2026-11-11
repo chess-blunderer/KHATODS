@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Patients · Khatod Hospital</title>
+<link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/forms.css">
+<link rel="stylesheet" href="../css/dashboard.css">
+<link rel="stylesheet" href="../css/responsive.css">
+<script>try{if(!sessionStorage.getItem('kh_splash'))document.documentElement.classList.add('splash-on')}catch(e){}</script>
+<script>try{if(!sessionStorage.getItem('kh_auth'))location.replace('../login.html')}catch(e){}</script>
+</head>
+<body data-page="patients" data-title="Patients" data-root="../" data-parent="">
+<div class="app">
+<aside class="sidebar" id="sidebar" aria-label="Main navigation"></aside>
+<div class="backdrop" id="backdrop"></div>
+<div class="main">
+<header class="topbar" id="topbar"></header>
+<main class="content">
+<div class="page-head"><div><h2>Patient directory</h2><p>Search and open patient records.</p></div>
+  <a class="btn btn-primary" href="registration.html"><i data-lucide="user-plus"></i>Register patient</a></div>
+<div class="toolbar">
+  <label class="search"><i data-lucide="search"></i><input id="dirSearch" type="search" placeholder="Search by name, ID or phone" aria-label="Search patients"></label>
+  <select id="sortSelect" aria-label="Sort patients">
+    <option value="regDate:desc">Newest registered</option><option value="regDate:asc">Oldest registered</option>
+    <option value="name:asc">Name A–Z</option><option value="name:desc">Name Z–A</option>
+    <option value="age:asc">Age, youngest first</option><option value="age:desc">Age, oldest first</option>
+    <option value="id:asc">Patient ID</option><option value="gender:asc">Gender</option></select></div>
+<div class="card"><div class="table-wrap"><table id="patientTable"><thead><tr>
+  <th data-sort="id">Patient ID<span class="arrow"></span></th><th data-sort="name">Patient name<span class="arrow"></span></th><th data-sort="age">Age<span class="arrow"></span></th><th>Weight</th>
+  <th data-sort="gender">Gender<span class="arrow"></span></th><th>Phone number</th><th data-sort="regDate">Registration date<span class="arrow"></span></th><th>Actions</th></tr></thead>
+  <tbody id="patientRows"></tbody></table></div>
+  <div id="emptyState"></div>
+  <div class="pagination"><span id="pageInfo"></span><div class="pages" id="pager"></div></div></div>
+</main></div></div>
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/navigation.js"></script>
+<script src="../js/patients.js"></script>
+</body></html>

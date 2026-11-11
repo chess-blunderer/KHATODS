@@ -1,0 +1,53 @@
+/* dashboard.css — stat cards, charts and dashboard/report layouts */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:18px}
+.stat{display:flex;gap:14px;align-items:flex-start}
+.stat .ico{width:44px;height:44px;border-radius:11px;display:grid;place-items:center;background:var(--blue-soft);color:var(--blue);flex:none}
+.stat .ico.teal{background:var(--teal-soft);color:var(--teal)}.stat .ico.amber{background:var(--amber-soft);color:#b97a12}.stat .ico.navy{background:#E3E9F0;color:var(--navy)}
+.stat .num{font-size:26px;font-weight:700;color:var(--navy);line-height:1.2}
+.stat .lbl{font-weight:500}.stat .sub{font-size:12px;color:var(--muted)}
+.grid{display:grid;gap:18px;margin-bottom:18px}
+.two-col{grid-template-columns:repeat(2,1fr)}
+.wide-left{grid-template-columns:2fr 1fr}
+.quick{display:grid;gap:10px}
+.quick .btn{justify-content:flex-start}
+.bars{display:flex;align-items:flex-end;gap:8px;height:200px}
+.bar-col{flex:1;min-width:0;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:5px}
+.bar{width:100%;max-width:36px;background:var(--blue);border-radius:6px 6px 0 0;min-height:2px}
+.bar.teal{background:var(--teal)}
+.bar-col .val{font-size:11px;font-weight:600;color:var(--navy)}.bar-col .lbl{font-size:11px;color:var(--muted);white-space:nowrap}
+.hbar{display:grid;grid-template-columns:120px 1fr 28px;gap:10px;align-items:center;margin-bottom:12px}
+.hbar .hl{font-size:13px}.hbar b{text-align:right;color:var(--navy)}
+.track{height:10px;background:var(--grey);border-radius:99px;overflow:hidden}.track i{display:block;height:100%;background:var(--blue);border-radius:99px}
+.donut-wrap{display:flex;align-items:center;gap:24px;flex-wrap:wrap}
+.donut{width:150px;height:150px;border-radius:50%;position:relative;display:grid;place-items:center;flex:none}
+.donut::after{content:"";position:absolute;inset:28px;background:#fff;border-radius:50%}
+.donut span{position:relative;z-index:1;text-align:center;font-size:22px;font-weight:700;color:var(--navy);line-height:1.1}
+.donut small{display:block;font-size:11px;font-weight:400;color:var(--muted)}
+.legend{list-style:none;padding:0;display:flex;flex-direction:column;gap:8px;flex:1;min-width:150px}
+.legend li{display:flex;align-items:center;gap:8px}.legend i{width:10px;height:10px;border-radius:3px;flex:none}.legend b{margin-left:auto;color:var(--navy)}
+
+/* Calendar page */
+.cal-layout{display:grid;grid-template-columns:1.6fr 1fr;gap:18px;align-items:start}
+.cal-nav{display:flex;align-items:center;gap:8px}
+.cal-title{font-family:var(--font-brand);font-size:24px;font-weight:700;color:var(--navy);flex:1;min-width:150px}
+.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+.cal-dow{text-align:center;font-size:12px;font-weight:600;color:var(--muted);padding:4px 0}
+.cal-day{min-height:64px;border:1px solid var(--border);border-radius:10px;background:#fff;display:flex;flex-direction:column;align-items:flex-start;justify-content:space-between;padding:6px 8px;cursor:pointer;font:500 14px Inter,sans-serif;color:var(--text);transition:background .15s,border-color .15s;text-align:left}
+.cal-day:hover{background:var(--grey)}
+.cal-day.today{border-color:var(--blue);box-shadow:inset 0 0 0 1px var(--blue)}
+.cal-day.future{color:#9FB3C8}
+.cal-day.sel{background:var(--navy);border-color:var(--navy);color:#fff}
+.cal-day.empty{visibility:hidden;pointer-events:none}
+.cal-count{align-self:flex-end;background:var(--blue-soft);color:#1b6396;border-radius:99px;font-size:11px;font-weight:600;padding:0 8px}
+.cal-day.sel .cal-count{background:rgba(255,255,255,.2);color:#fff}
+.day-stats{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0}
+.day-stats div{flex:1;min-width:80px;background:var(--grey);border-radius:10px;padding:10px 12px}
+.day-stats b{display:block;font-size:20px;color:var(--navy)}.day-stats span{font-size:12px;color:var(--muted)}
+.day-list{padding-left:20px;display:flex;flex-direction:column;gap:6px;max-height:260px;overflow:auto;margin-bottom:16px}
+.day-list li.done span{text-decoration:line-through;color:var(--muted)}
+.day-list small{color:var(--muted);margin-left:6px}
+
+/* Patient view */
+.status-card{display:flex;gap:20px;align-items:center}
+.big-no{font-family:var(--font-brand);font-size:68px;font-weight:700;color:var(--blue);line-height:1;min-width:64px;text-align:center}
+.status-card h3{font-size:18px;margin-bottom:4px}

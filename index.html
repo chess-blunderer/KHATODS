@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dashboard · Khatod Hospital</title>
+<link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/forms.css">
+<link rel="stylesheet" href="css/dashboard.css">
+<link rel="stylesheet" href="css/responsive.css">
+<script>try{if(!sessionStorage.getItem('kh_splash'))document.documentElement.classList.add('splash-on')}catch(e){}</script>
+<script>try{if(!sessionStorage.getItem('kh_auth'))location.replace('login.html')}catch(e){}</script>
+</head>
+<body data-page="dashboard" data-title="Dashboard" data-root="" data-parent="">
+<div class="app">
+<aside class="sidebar" id="sidebar" aria-label="Main navigation"></aside>
+<div class="backdrop" id="backdrop"></div>
+<div class="main">
+<header class="topbar" id="topbar"></header>
+<main class="content">
+<div class="page-head"><div><h2>Hospital overview</h2><p id="todayLabel"></p></div>
+  <div class="actions"><a class="btn btn-primary" href="pages/registration.html"><i data-lucide="user-plus"></i>Register patient</a>
+  <a class="btn btn-ghost" href="pages/patients.html?focus=1"><i data-lucide="search"></i>Search patient</a></div></div>
+<section class="stats" id="stats" aria-label="Key statistics"></section>
+<section class="grid two-col">
+  <div class="card"><div class="card-head"><div><h3>Patient registrations</h3><p>New patients over the last 7 days</p></div></div><div id="trendChart"></div></div>
+  <div class="card"><div class="card-head"><div><h3>Waiting today</h3><p>In the order they were added</p></div><a class="btn btn-ghost btn-sm" href="pages/appointments.html">Open list</a></div><div id="todayList"></div></div>
+</section>
+<section class="grid wide-left">
+  <div class="card"><div class="card-head"><h3>Recent patient registrations</h3><a class="btn btn-ghost btn-sm" href="pages/patients.html">View all patients</a></div>
+    <div class="table-wrap"><table style="min-width:480px"><thead><tr><th>Patient ID</th><th>Name</th><th>Age</th><th>Registered</th></tr></thead><tbody id="recentBody"></tbody></table></div><div id="recentEmpty"></div></div>
+  <div class="card"><div class="card-head"><h3>Quick actions</h3></div><div class="quick">
+    <a class="btn btn-primary" href="pages/registration.html"><i data-lucide="user-plus"></i>Register patient</a>
+    <a class="btn btn-ghost" href="pages/patients.html?focus=1"><i data-lucide="search"></i>Search patient</a>
+    <a class="btn btn-ghost" href="pages/appointments.html"><i data-lucide="calendar-check"></i>Today's list</a>
+    <a class="btn btn-ghost" href="pages/calendar.html"><i data-lucide="calendar-days"></i>Calendar and PDF reports</a></div></div>
+</section>
+</main></div></div>
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/navigation.js"></script>
+<script src="js/dashboard.js"></script>
+</body></html>

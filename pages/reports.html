@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reports · Khatod Hospital</title>
+<link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/forms.css">
+<link rel="stylesheet" href="../css/dashboard.css">
+<link rel="stylesheet" href="../css/responsive.css">
+<script>try{if(!sessionStorage.getItem('kh_splash'))document.documentElement.classList.add('splash-on')}catch(e){}</script>
+<script>try{if(!sessionStorage.getItem('kh_auth'))location.replace('../login.html')}catch(e){}</script>
+</head>
+<body data-page="reports" data-title="Reports" data-root="../" data-parent="">
+<div class="app">
+<aside class="sidebar" id="sidebar" aria-label="Main navigation"></aside>
+<div class="backdrop" id="backdrop"></div>
+<div class="main">
+<header class="topbar" id="topbar"></header>
+<main class="content">
+<div class="page-head"><div><h2>Reports and analytics</h2><p>Summaries calculated from the patients and daily lists saved in this browser. For a printable daily report, use the Calendar.</p></div>
+  <a class="btn btn-ghost" href="calendar.html"><i data-lucide="calendar-days"></i>Open calendar</a></div>
+<section class="grid two-col">
+  <div class="card"><div class="card-head"><div><h3>Daily registrations</h3><p>New patients, last 14 days</p></div></div><div id="dailyChart"></div></div>
+  <div class="card"><div class="card-head"><div><h3>Monthly registrations</h3><p>New patients, last 6 months</p></div></div><div id="monthlyChart"></div></div>
+</section>
+<section class="grid two-col">
+  <div class="card"><div class="card-head"><div><h3>Patients per day</h3><p>Appointment list size, last 14 days</p></div></div><div id="visitDays"></div></div>
+  <div class="card"><div class="card-head"><div><h3>New and returning</h3><p>All recorded visits</p></div></div><div id="typeChart"></div></div>
+</section>
+</main></div></div>
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/navigation.js"></script>
+<script src="../js/dashboard.js"></script>
+</body></html>

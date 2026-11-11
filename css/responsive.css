@@ -1,0 +1,28 @@
+/* responsive.css — tablet and mobile adjustments (loaded last) */
+@media (max-width:1100px){.stats{grid-template-columns:repeat(2,1fr)}.two-col,.wide-left{grid-template-columns:1fr}}
+@media (max-width:900px){
+ .sidebar{transform:translateX(-100%)}.sidebar.open{transform:none}
+ .backdrop.show{display:block}
+ .main{margin-left:0}
+ .menu-btn{display:grid}
+ .topbar,.content{padding-left:18px;padding-right:18px}
+ .search{width:220px}
+}
+@media (max-width:640px){
+ .stats,.form-grid,.info-grid{grid-template-columns:1fr}
+ .user-meta{display:none}
+ .topbar .search{display:none;order:9;width:100%}
+ .topbar.search-open .search{display:flex}
+ .search-toggle{display:grid}
+ .content{padding-top:18px}
+ .page-head{align-items:flex-start}
+ .toolbar .search{width:100%}
+ dl.info{grid-template-columns:110px 1fr}
+ .hbar{grid-template-columns:90px 1fr 24px}
+ .form-actions .btn{flex:1}
+ #toasts{left:12px;right:12px}.toast{max-width:none}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+@media (max-width:1100px){.cal-layout{grid-template-columns:1fr}}
+@media (max-width:640px){.cal-grid{gap:4px}.cal-day{min-height:50px;padding:4px 5px;font-size:13px}.cal-count{padding:0 5px;font-size:10px}}
+@media (max-width:640px){.notif-wrap{position:static}.notif-pop{position:fixed;top:64px;left:12px;right:12px;width:auto;max-width:none}}

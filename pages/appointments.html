@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Appointments · Khatod Hospital</title>
+<link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/forms.css">
+<link rel="stylesheet" href="../css/dashboard.css">
+<link rel="stylesheet" href="../css/responsive.css">
+<script>try{if(!sessionStorage.getItem('kh_splash'))document.documentElement.classList.add('splash-on')}catch(e){}</script>
+<script>try{if(!sessionStorage.getItem('kh_auth'))location.replace('../login.html')}catch(e){}</script>
+</head>
+<body data-page="appointments" data-title="Appointments" data-root="../" data-parent="">
+<div class="app">
+<aside class="sidebar" id="sidebar" aria-label="Main navigation"></aside>
+<div class="backdrop" id="backdrop"></div>
+<div class="main">
+<header class="topbar" id="topbar"></header>
+<main class="content">
+<div class="page-head"><div><h2>Today's appointment list</h2><p id="dateLabel"></p></div>
+  <div class="actions"><a class="btn btn-primary" href="registration.html"><i data-lucide="user-plus"></i>Register patient</a>
+  <button class="btn btn-ghost" id="viewPdf"><i data-lucide="file-text"></i>View PDF</button>
+  <button class="btn btn-ghost" id="downloadPdf"><i data-lucide="download"></i>Download PDF</button></div></div>
+<div class="card">
+  <p class="muted" style="margin-bottom:14px">Patients appear here as soon as they are registered, with the first one added at the top. Tick the box to strike a name out; the record stays in the list.</p>
+  <div class="toolbar"><label class="search" style="background:var(--grey)"><i data-lucide="search"></i><input id="apptSearch" type="search" placeholder="Search by patient name or ID" aria-label="Search today's list"></label>
+    <span class="muted" id="queueSummary"></span></div>
+  <div class="table-wrap"><table style="min-width:600px"><thead><tr><th>No.</th><th>Strike out</th><th>Patient name</th><th>Patient ID</th><th>Age and weight</th><th>Type</th></tr></thead><tbody id="apptRows"></tbody></table></div>
+  <div id="apptEmpty"></div></div>
+</main></div></div>
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/navigation.js"></script>
+<script src="../js/pdf.js"></script>
+<script src="../js/appointments.js"></script>
+</body></html>

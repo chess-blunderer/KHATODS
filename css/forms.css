@@ -1,0 +1,26 @@
+/* forms.css — form layout, inputs, validation states, profile details */
+.form-stack{display:flex;flex-direction:column;gap:18px;max-width:900px}
+.form-title{margin-bottom:16px}
+.form-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px 20px}
+.field{display:flex;flex-direction:column;gap:6px;min-width:0}
+.field.span2{grid-column:1/-1}
+.field label{font-size:13px;font-weight:500;color:var(--navy)}
+.req{color:var(--red)}
+.field input,.field select,.field textarea{width:100%;border:1px solid var(--border);border-radius:9px;padding:9px 12px;background:#fff;transition:border-color .15s,box-shadow .15s}
+.field input,.field select{height:40px}
+.field input:focus,.field select:focus,.field textarea:focus{outline:0;border-color:var(--blue);box-shadow:0 0 0 3px var(--blue-soft)}
+.field input[readonly]{background:var(--grey);color:var(--muted)}
+.field .invalid{border-color:var(--red)}
+.err{color:var(--red);font-size:12px}
+.form-actions{display:flex;gap:12px;justify-content:flex-end;flex-wrap:wrap}
+.notice{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap;padding:14px 16px;border-radius:10px;margin-bottom:18px;background:var(--teal-soft);border:1px solid #BFE3DD;color:#1f776c}
+.notice a{font-weight:600;margin-left:14px}
+.profile-head{display:flex;gap:18px;align-items:center;flex-wrap:wrap;margin-bottom:18px}
+.profile-head .grow{flex:1;min-width:200px}
+.profile-head h2{font-size:22px}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}
+.info-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+dl.info{display:grid;grid-template-columns:130px 1fr;gap:10px 12px}
+dl.info dt{color:var(--muted)}dl.info dd{font-weight:500;color:var(--navy);overflow-wrap:anywhere}
+.mini-list{list-style:none;padding:0;display:flex;flex-direction:column;gap:10px}
+.mini-list li{display:flex;justify-content:space-between;gap:10px;align-items:center}

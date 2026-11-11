@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Login · Khatod Hospital</title>
+<link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/forms.css">
+<link rel="stylesheet" href="css/login.css">
+<script>try{if(!sessionStorage.getItem('kh_splash'))document.documentElement.classList.add('splash-on')}catch(e){}</script>
+</head>
+<body>
+<main class="login-wrap">
+  <section class="login-brand"><h1>Khatod Hospital</h1><p>You are in safe hands.</p></section>
+  <section class="login-panel"><div class="login-card">
+    <div class="tabs" role="tablist"><button class="tab active" role="tab" aria-selected="true" data-tab="patient">Patient login</button><button class="tab" role="tab" aria-selected="false" data-tab="staff">Staff login</button></div>
+
+    <div id="patientPane">
+      <form id="phoneForm" novalidate>
+        <h2>Welcome</h2>
+        <p class="sub">Enter the mobile number the hospital desk has on your record. We will send you a code by SMS.</p>
+        <div class="field"><label for="phone">Mobile number</label>
+          <div class="phone-row"><span>+91</span><input id="phone" type="tel" inputmode="numeric" autocomplete="tel-national" placeholder="10-digit number"></div>
+          <small class="err" data-err="phone"></small></div>
+        <button class="btn btn-primary" type="submit">Send code</button>
+        <p class="hint">New patient? Patients are registered at the hospital desk. After that you can log in here with the same number.</p>
+        <p class="hint" id="phoneTip"></p>
+      </form>
+      <form id="otpForm" hidden novalidate>
+        <h2>Enter your code</h2>
+        <p class="sub" id="otpSub"></p>
+        <div class="field"><label for="otp">6-digit code</label>
+          <input id="otp" class="otp-input" inputmode="numeric" maxlength="6" autocomplete="one-time-code" placeholder="••••••">
+          <small class="err" data-err="otp"></small></div>
+        <button class="btn btn-primary" type="submit">Verify and continue</button>
+        <div class="login-links"><button type="button" class="linklike" id="resendBtn" disabled>Resend code</button><button type="button" class="linklike" id="changeNum">Change number</button></div>
+      </form>
+      <div class="demo-box" id="demoBox" hidden></div>
+    </div>
+
+    <div id="staffPane" hidden>
+      <form id="staffForm" novalidate>
+        <h2>Staff login</h2>
+        <p class="sub">For desk managers and managers.</p>
+        <div class="field"><label for="email">Email</label><input id="email" type="email" autocomplete="username" placeholder="name@khatod.demo"><small class="err" data-err="email"></small></div>
+        <div class="field"><label for="password">Password</label><input id="password" type="password" autocomplete="current-password"><small class="err" data-err="password"></small></div>
+        <button class="btn btn-primary" type="submit">Sign in</button>
+      </form>
+      <div class="demo-box"><b>Demo accounts</b> (the real system will not show these):<div id="demoAccounts"></div></div>
+    </div>
+  </div></section>
+</main>
+<script src="js/main.js"></script>
+<script src="js/login.js"></script>
+</body>
+</html>
